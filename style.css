@@ -1,0 +1,168 @@
+:root {
+  --Purple: hsl(259, 100%, 65%);
+  --Light-red: hsl(0, 100%, 67%);
+  --White: hsl(0, 0%, 100%);
+  --Off-white: hsl(0, 0%, 94%);
+  --Light-grey: hsl(0, 0%, 86%);
+  --Smokey-grey: hsl(0, 1%, 44%);
+  --Off-black: hsl(0, 0%, 8%);
+}
+
+*,
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--Off-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#container {
+  width: 90%;
+  max-width: 600px;
+  background-color: var(--White);
+  padding: 3em;
+  border-radius: 20px;
+  border-bottom-right-radius: 30%;
+  box-shadow: 0 0 8px var(--Light-grey);
+}
+
+#ageForm {
+  display: flex;
+  width: 80%;
+}
+
+.input-label {
+  font-family: inherit;
+  color: var(--Smokey-grey);
+  font-size: 0.6rem;
+  letter-spacing: 2px;
+  margin-bottom: 7px;
+}
+
+.form-width {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+}
+
+.input-width {
+  width: 80%;
+  font-family: inherit;
+  font-size: 24px;
+  color: var(--Off-black);
+  padding: 0.2em 0.5em;
+  border: 1px solid var(--Light-grey);
+  border-radius: 8px;
+  outline: none;
+}
+
+.input-width:focus {
+  border-color: var(--Purple);
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+#img-container {
+  position: relative;
+  margin-top: 2.5em;
+}
+
+#line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--Light-grey);
+}
+
+#image {
+  position: absolute;
+  background-color: var(--Purple);
+  padding: 1em;
+  border-radius: 50%;
+  top: 0;
+  right: -30px;
+  width: 60px;
+  transform: translate(-50%, -50%);
+}
+
+#image:hover {
+  background-color: var(--Off-black);
+}
+
+.h1-div {
+  margin-top: 5em;
+}
+
+.font {
+  font-size: 4rem;
+  font-style: italic;
+  font-weight: 800;
+  margin-bottom: -30px;
+}
+
+.purple {
+  color: var(--Purple);
+}
+
+.eror {
+  display: none;
+  color: var(--Light-red);
+  font-size: 0.5em;
+  font-weight: 400;
+  font-style: italic;
+  margin-top: 5px;
+}
+
+@media screen and (max-width: 767px) {
+  #ageForm {
+    display: flex;
+    width: 100%;
+  }
+
+  .form-width {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .input-width {
+    width: 95%;
+  }
+
+  .font {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+
+  #img-container {
+    margin-top: 3.5em;
+  }
+
+  #image {
+    top: 0;
+    left: 50%;
+  }
+
+  #container {
+    padding: 3em 1.5em;
+  }
+}

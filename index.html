@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Age Calculator</title>
+  </head>
+  <body>
+    <main>
+      <div id="container">
+        <form id="ageForm">
+          <div class="form-width">
+            <label id="d-title" class="input-label" for="day">DAY</label>
+            <input
+              class="input-width"
+              placeholder="DD"
+              type="number"
+              id="day"
+              required
+            />
+            <p class="eror" id="empty-day">This field is required</p>
+            <p class="eror" id="valid-day">Must be a valid day</p>
+          </div>
+
+          <div class="form-width">
+            <label id="m-title" class="input-label" for="month">MONTH</label>
+            <input
+              class="input-width"
+              placeholder="MM"
+              type="number"
+              id="month"
+              required
+            />
+            <p class="eror" id="empty-month">This field is required</p>
+            <p class="eror" id="valid-month">Must be a valid month</p>
+          </div>
+
+          <div class="form-width">
+            <label id="y-title" class="input-label" for="year">YEAR</label>
+            <input
+              class="input-width"
+              placeholder="YYYY"
+              type="number"
+              id="year"
+              required
+            />
+            <p class="eror" id="empty-year">This field is required</p>
+            <p class="eror" id="valid-year">Must be in the past</p>
+          </div>
+        </form>
+
+        <div id="img-container">
+          <div id="line"></div>
+          <img
+            onclick="calculateAge()"
+            id="image"
+            src="./icon-arrow.svg"
+            alt="arrow"
+          />
+        </div>
+
+        <div class="h1-div">
+          <h1 class="font">
+            <span class="purple" id="age-year">--</span>years
+          </h1>
+          <h1 class="font">
+            <span class="purple" id="age-month">--</span>months
+          </h1>
+          <h1 class="font"><span class="purple" id="age-day">--</span>days</h1>
+        </div>
+      </div>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
